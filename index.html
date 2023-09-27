@@ -27,49 +27,49 @@
         <h3>Videomaker/Webdesigner</h3>
       </div>
     </div>
-    <body>
+    <div class="main-portfolio">
         <header>
-          <a href="index.html"
-            ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
+            <a href="index.html"
+              ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
+            /></a>
+            <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
+              <span class="hamburger"></span>
+              <span class="hamburger"></span>
+              <span class="hamburger"></span>
+            </button>
+            <nav :class="menuIsOpen && 'menu_open'" class="menu">
+              <div>
+                <a href="/index.html"
+                  ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
+                /></a>
+                <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
+                  <span class="close"></span>
+                  <span class="close"></span>
+                </button>
+              </div>
+              <ul>
+                <li><a href="index.html#works">WORKS</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+            </nav>
+          </header>
+      <main></main>
+      <footer>
+        <img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM" />
+        <a href="mailto:contact@paulmarchiset.me">contact@paulmarchiset.me</a>
+        <div>
+          <a href="https://www.instagram.com/paul.h264/"
+            ><img src="/assets/icons/INSTA.svg" alt=""
           /></a>
-          <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-          </button>
-          <nav :class="menuIsOpen && 'menu_open'" class="menu">
-            <div>
-              <a href="/index.html"
-                ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
-              /></a>
-              <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
-                <span class="close"></span>
-                <span class="close"></span>
-              </button>
-            </div>
-            <ul>
-              <li><a href="/web3/index.html">WEB 3</a></li>
-              <li><a href="/web5/#">WEB 5</a></li>
-              <li><a href="/video/index.html">VIDEO</a></li>
-            </ul>
-          </nav>
-        </header>
-    <main></main>
-    <footer>
-      <img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM" />
-      <a href="mailto:contact@paulmarchiset.me">contact@paulmarchiset.me</a>
-      <div>
-        <a href="https://www.instagram.com/paul.h264/"
-          ><img src="/assets/icons/INSTA.svg" alt=""
-        /></a>
-
-        <a href="https://www.x.com/PaulMarchiset/"
-          ><img src="/assets/icons/X.svg" alt=""
-        /></a>
-        <a href="https://www.linkedin.com/in/paulmarchiset/"
-          ><img src="/assets/icons/IN.svg" alt=""
-        /></a>
-      </div>
-    </footer>
+          <a href="https://www.x.com/PaulMarchiset/"
+            ><img src="/assets/icons/X.svg" alt=""
+          /></a>
+          <a href="https://www.linkedin.com/in/paulmarchiset/"
+            ><img src="/assets/icons/IN.svg" alt=""
+          /></a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

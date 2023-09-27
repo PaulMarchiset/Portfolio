@@ -2,7 +2,22 @@ html {
     font-family: 'Outfit', sans-serif;  
 }
 
+.noScroll,
+.noScroll body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 h1 {
     padding: 0;
     margin: 0  ;
+}
+
+.main-portfolio {
+    background-image: url(/assets/img/portfolio_black_paper.png);
+        height: 100%; /* 100% of the viewport height */
 }

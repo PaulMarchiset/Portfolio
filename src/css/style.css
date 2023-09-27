@@ -13,6 +13,7 @@
   /*components*/
   @import "components/menu.css";
 @import "components/hero.css";
+@import "components/button.css";
   
   /* fonts */
  @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
