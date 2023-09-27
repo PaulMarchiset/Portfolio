@@ -1,0 +1,25 @@
+.hero {
+    background-image: url(/assets/img/portfolio_paper.png);
+    font-family: "kepler-std-display", serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* 100% of the viewport height */
+}
+
+.hero-container {
+    text-align: center; /* Center text within the container */
+}
+
+.hero h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+    text-align: center;
+
+}
