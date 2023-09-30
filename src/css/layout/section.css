@@ -13,6 +13,7 @@
 .works-container-card > img {
     object-fit: cover;
     aspect-ratio: 1/1;
+    border-radius: 8px;
 }
 
 .works-container-description {
@@ -31,6 +32,7 @@
         box-sizing: border-box;
         transition: opacity 0.5s ease-in-out;
         text-align: right;
+        border-radius: 8px;
       }
 
 .works-container-description p {
@@ -56,6 +58,7 @@
           grid-row-end: span 7;
           grid-column-end: span 6;
           padding: 0;
+        
       }
       
       .works-container-card:nth-child(2) {

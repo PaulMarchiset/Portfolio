@@ -7,6 +7,7 @@
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* 100% of the viewport height */
+    flex-direction: column;
 }
 
 .hero-container {
@@ -21,4 +22,16 @@
 .hero h3 {
     font-size: 1.5em;
     text-align: center;
+}
+
+.hero-scroll {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .hero-scroll {
+        display: block;
+        position: absolute;
+        bottom: 10vh;
+    }
 }

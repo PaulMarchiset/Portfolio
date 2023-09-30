@@ -1,5 +1,5 @@
 footer {
-    background-color: #000;
+    background-color: rgba(0,0,0,0.1);
     color: #fff;
     padding: 2rem;
     text-align: center;
@@ -26,9 +26,4 @@ footer > div > a {
 footer > a {
     color: #fff;
     padding: 1em;
-}
-
-.footer_cloud {
-    background-color: #fff;
-    color: #000;
 }
