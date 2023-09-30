@@ -6,6 +6,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    top: 0 ;    
 }
 
 header > a > img {

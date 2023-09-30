@@ -5,10 +5,6 @@
     <title>Paul Marchiset</title>
     <meta name="copyright" content="Copyright 2023 Paul Marchiset" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="https://use.typekit.net/bqc3euf.css" />
     <link rel="stylesheet" href="/src/css/style.css" />
     <link
@@ -18,43 +14,79 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   </head>
   <body>
     <div class="hero">
       <div class="hero-container">
-        <h1>Paul</h1>
-        <h1>Marchiset</h1>
+            <h1>Paul</h1>
+            <h1>Marchiset</h1>        
         <h3>Videomaker/Webdesigner</h3>
       </div>
     </div>
     <div class="main-portfolio">
-        <header>
-            <a href="index.html"
+      <header>
+        <a href="index.html"
+          ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
+        /></a>
+        <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+        <nav :class="menuIsOpen && 'menu_open'" class="menu">
+          <div>
+            <a href="/index.html"
               ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
             /></a>
             <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
-              <span class="hamburger"></span>
-              <span class="hamburger"></span>
-              <span class="hamburger"></span>
+              <span class="close"></span>
+              <span class="close"></span>
             </button>
-            <nav :class="menuIsOpen && 'menu_open'" class="menu">
-              <div>
-                <a href="/index.html"
-                  ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
-                /></a>
-                <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
-                  <span class="close"></span>
-                  <span class="close"></span>
-                </button>
-              </div>
-              <ul>
-                <li><a href="index.html#works">WORKS</a></li>
-                <li><a href="about.html">ABOUT ME</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-              </ul>
-            </nav>
-          </header>
-      <main></main>
+          </div>
+          <ul>
+            <li><a href="index.html#works">WORKS</a></li>
+            <li><a href="about.html">ABOUT ME</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <ul class="works-container">
+          <li class="works-container-card">
+            <img src="/assets/img/trophy_V1.png" alt="" />
+            <div class="works-container-description">
+              <h3>Trophy 3D</h3>
+              <p>2023</p>
+              <p>Illustrator, Dimension</p>
+            </div>
+          </li>
+          <li class="works-container-card">
+            <img src="/assets/img/test-logo-portfolio.png" alt="" />
+            <div class="works-container-description">
+              <h3>Trophy 3D</h3>
+              <p>2023</p>
+              <p>Illustrator, Dimension</p>
+            </div>
+          </li>
+          <li class="works-container-card">
+            <img src="/assets/img/WIP.svg" alt="" />
+            <div class="works-container-description">
+              <h3>Trophy 3D</h3>
+              <p>2023</p>
+              <p>Illustrator, Dimension</p>
+            </div>
+          </li>
+          <li class="works-container-card">
+            <img src="/assets/img/WIP.svg" alt="" />
+            <div class="works-container-description">
+              <h3>Trophy 3D</h3>
+              <p>2023</p>
+              <p>Illustrator, Dimension</p>
+            </div>
+          </li>
+        </ul>
+      </main>
       <footer>
         <img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM" />
         <a href="mailto:contact@paulmarchiset.me">contact@paulmarchiset.me</a>
@@ -72,4 +104,6 @@
       </footer>
     </div>
   </body>
+
+  <script src="/src/js/anime.js"></script>
 </html>
