@@ -30,7 +30,18 @@
         opacity: 0;
         box-sizing: border-box;
         transition: opacity 0.5s ease-in-out;
+        text-align: right;
       }
+
+.works-container-description p {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 2;
+}
+
+.works-container-description p + p {
+  font-size: 1rem;
+}
 
 @media (min-width: 850px) {
     .works-container {

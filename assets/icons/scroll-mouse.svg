@@ -1,0 +1,6 @@
+<svg width="50" height="75" viewBox="0 0 50 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="scroll-mouse">
+<rect id="mouse" x="3" y="3" width="44" height="69" rx="22" stroke="black" stroke-width="6"/>
+<path id="scroll" d="M25 58L25 40" stroke="black" stroke-width="6" stroke-linecap="round"/>
+</g>
+</svg>

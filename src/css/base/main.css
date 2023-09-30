@@ -1,5 +1,6 @@
 html {
-  font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
+  font-family: "niveau-grotesk", sans-serif;
 }
 
 .noScroll,
@@ -25,7 +26,8 @@ h3 {
 }
 
 .main-portfolio {
-  background-image: url(/assets/img/portfolio_black_paper.png);
+  /* background-image: url(/assets/img/portfolio_black_paper.png); */
+  background-color: #050505;
   height: 100%; /* 100% of the viewport height */
 }
 

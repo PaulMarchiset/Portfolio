@@ -86,9 +86,9 @@ nav > ul > li {
 
 nav > ul > li > a {
     padding: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: white;
-}
+ text-transform: uppercase;}
 
 @media (min-width: 1024px) {
   nav {
