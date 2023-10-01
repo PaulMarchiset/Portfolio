@@ -7,28 +7,39 @@
 }
 
 .works-container-card {
-  display: contents;
+  display: block;
+  padding: 20vh 0;
 }
 
 .works-container-description h3 {
   text-align: center;
+  line-height: 1;
+  padding-bottom: 5vh;
 }
 
 .works-container-description h5 {
   display: none;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 3.5vw;
+  font-weight: 400;
   margin: 0;
   line-height: 3;
 }
 
 .works-container-description p {
   display: none;
+  font-weight: 100;
   font-size: 1.25rem;
   margin: 0;
 }
 
 .works-container-card img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 36px;
+}
+
+.works-container-card video {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 1/1;
@@ -55,10 +66,8 @@
     grid-gap: 2rem;
     grid-auto-rows: 3rem;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    padding: 0;
-    
-  height: 100vh;
-  justify-content: center;
+    padding: 15vh 0;
+
   }
   .works-container-description {
     display: flex;
@@ -75,13 +84,20 @@
     perspective: 25px;
   }
   .works-container-card img {
-    width: auto;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .works-container-card video {
+    width: 100%;
+    height: 100%;
     aspect-ratio: auto;
   }
 
   .works-container-description h3 {
     text-align: right;
+    padding: 0;
   }
   .works-container-description h5 {
     display: block;
