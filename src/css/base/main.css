@@ -21,7 +21,7 @@ h1 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0;
 }
 
@@ -43,4 +43,7 @@ main {
     flex-direction: column;
     padding: 5rem 4rem;
   }
+  
 }
+
+

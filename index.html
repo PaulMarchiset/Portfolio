@@ -19,11 +19,16 @@
   <body>
     <div class="hero">
       <div class="hero-container">
-            <h1>Paul</h1>
-            <h1>Marchiset</h1>        
+        <h1>Paul</h1>
+        <h1>Marchiset</h1>
         <h3>Videomaker/Webdesigner</h3>
       </div>
-      <a href="#works"><img class="hero-scroll" src="/assets/icons/scroll-mouse.svg" alt="scroll-mouse"></a>
+      <a href="#works"
+        ><img
+          class="hero-scroll"
+          src="/assets/icons/scroll-mouse.svg"
+          alt="scroll-mouse"
+      /></a>
     </div>
     <div class="main-portfolio" id="works">
       <header>
@@ -33,9 +38,13 @@
         <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
           <span class="hamburger"></span>
           <span class="hamburger"></span>
-          <span class="hamburger" ></span>
+          <span class="hamburger"></span>
         </button>
-        <nav :class="menuIsOpen && 'menu_open'" x-transition.opacity class="menu">
+        <nav
+          :class="menuIsOpen && 'menu_open'"
+          x-transition.opacity
+          class="menu"
+        >
           <div>
             <a href="/index.html"
               ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
@@ -46,47 +55,23 @@
             </button>
           </div>
           <ul>
-            <li><a href="index.html#works">Works</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a class="menu-nav" href="index.html#works">Works</a></li>
+            <li><a class="menu-nav" href="about.html">About Me</a></li>
+            <li><a class="menu-nav" href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </header>
       <main>
         <ul class="works-container">
           <li class="works-container-card">
-            <img src="/assets/img/trophy_V1.png" alt="" />
-            <a href="">
-              <div class="works-container-description">
-                <h3>3D Trophy</h3>
-                <p>2023</p>
-                <p>Adobe Illustrator, Adobe Dimension</p>
-              </div>
+            <div class="works-container-description">
+              <h3>3D Trophy</h3>
+              <h5>2023</h5>
+              <p>Illustrator / Dimension</p>
+            </div>
+            <a id="container" href="">
+                            <img id="inner" src="/assets/img/trophy_V1.png" alt="" />
             </a>
-          </li>
-          <li class="works-container-card">
-            <img src="/assets/img/test-logo-portfolio.png" alt="" />
-            <div class="works-container-description">
-              <h3>Trophy 3D</h3>
-              <p>2023</p>
-              <p>Illustrator, Dimension</p>
-            </div>
-          </li>
-          <li class="works-container-card">
-            <img src="/assets/img/WIP.svg" alt="" />
-            <div class="works-container-description">
-              <h3>Trophy 3D</h3>
-              <p>2023</p>
-              <p>Illustrator, Dimension</p>
-            </div>
-          </li>
-          <li class="works-container-card">
-            <img src="/assets/img/WIP.svg" alt="" />
-            <div class="works-container-description">
-              <h3>Trophy 3D</h3>
-              <p>2023</p>
-              <p>Illustrator, Dimension</p>
-            </div>
           </li>
         </ul>
       </main>

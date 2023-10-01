@@ -117,9 +117,6 @@ nav > ul > li > a {
     background: transparent;
     text-align: left;
   }
-}
-
-@media (min-width: 1024px) {
   nav > ul {
     display: flex;
     justify-content: flex-end;
@@ -128,6 +125,28 @@ nav > ul > li > a {
   }
     nav > ul > li {
         padding: 0;
+    }
+    .menu-nav {
+      position: relative;
+    }
+    
+    .menu-nav::before {
+      content: '';
+      position: absolute;
+      width: 104%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+    
+    .menu-nav:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
     }
   
 }
