@@ -1,7 +1,6 @@
-Hi!
+<h1 align="center">PORTFOLIO - PAUL MARCHISET</h1>
 
-Welcome on my portfolio!
+## **What is this Portfolio?**
+It is a hand-made Portfolio developed in HTML/CSS/JS (yes sometimes I use ChatGPT)
 
-it is hand-made in HTML/CSS/JS (with a little ofChatGPT)
-
-for this project, i'm using Anime.JS and GSAP
+Librairy: Anime.JS and GSAP
