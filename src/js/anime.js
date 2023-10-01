@@ -5,8 +5,16 @@ anime({
     easing: "easeInOutQuad",
     direction: "alternate",
     loop: true
-
   });
+
+anime({
+  targets: ".scroll",
+  translateY: [-1, -4],
+  duration: 1000,
+    easing: "easeInOutQuad",
+    direction: "alternate",
+    loop: true
+});
 
   (function() {
     // Init
