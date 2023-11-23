@@ -1,25 +1,9 @@
 header {
-    position: sticky;
+    position: absolute;
+    top: 3.125rem;
     display: flex;
-    height: 80px;
-    background: rgba(0,0,0,0.1);
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    top: 0 ;    
-}
-
-header > a > img {
-    padding-left: 1em;
-}
-
-
-
-@media screen and (min-width: 1024px) {
-    header {
-        padding-left: 2em;
-    }
-    header > a > img {
-        padding-left: 0;
-    }
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    z-index: 1;
 }

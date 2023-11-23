@@ -1,96 +1,55 @@
-anime({
-    targets: ".hero-scroll",
-    translateY: [-2, 3],
-    duration: 750,
-    easing: "easeInOutQuad",
-    direction: "alternate",
-    loop: true
-  });
+var textWrapper = document.querySelector(".paul");
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
 
-anime({
-  targets: ".scroll",
-  translateY: [-1, -4],
-  duration: 1000,
-    easing: "easeInOutQuad",
-    direction: "alternate",
-    loop: true
+anime.timeline({ loop: false }).add({
+  targets: ".paul .letter",
+  translateY: [-100, 0],
+  easing: "easeOutExpo",
+  duration: 1400,
+  delay: (el, i) => 30 * i,
 });
 
-  (function() {
-    // Init
-    var container = document.getElementById("container"),
-      inner = document.getElementById("inner");
-  
-    // Mouse
-    var mouse = {
-      _x: 0,
-      _y: 0,
-      x: 0,
-      y: 0,
-      updatePosition: function(event) {
-        var e = event || window.event;
-        this.x = e.clientX - this._x;
-        this.y = (e.clientY - this._y) * -1;
-      },
-      setOrigin: function(e) {
-        this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-        this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-      },
-      show: function() {
-        return "(" + this.x + ", " + this.y + ")";
-      }
-    };
-  
-    // Track the mouse position relative to the center of the container.
-    mouse.setOrigin(container);
-  
-    //-----------------------------------------
-  
-    var counter = 0;
-    var updateRate = 10;
-    var isTimeToUpdate = function() {
-      return counter++ % updateRate === 0;
-    };
-  
-    //-----------------------------------------
-  
-    var onMouseEnterHandler = function(event) {
-      update(event);
-    };
-  
-    var onMouseLeaveHandler = function() {
-      inner.style = "";
-    };
-  
-    var onMouseMoveHandler = function(event) {
-      if (isTimeToUpdate()) {
-        update(event);
-      }
-    };
-  
-    //-----------------------------------------
-  
-    var update = function(event) {
-      mouse.updatePosition(event);
-      updateTransformStyle(
-        (mouse.y / inner.offsetHeight / 2).toFixed(2),
-        (mouse.x / inner.offsetWidth / 2).toFixed(2)
-      );
-    };
-  
-    var updateTransformStyle = function(x, y) {
-      var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-      inner.style.transform = style;
-      inner.style.webkitTransform = style;
-      inner.style.mozTransform = style;
-      inner.style.msTransform = style;
-      inner.style.oTransform = style;
-    };
-  
-    //-----------------------------------------
-  
-    container.onmouseenter = onMouseEnterHandler;
-    container.onmouseleave = onMouseLeaveHandler;
-    container.onmousemove = onMouseMoveHandler;
-  })();
-  
+var textWrapper = document.querySelector(".marchiset");
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
+
+anime.timeline({ loop: false }).add({
+  targets: ".marchiset .letter",
+  translateY: [-100, 0],
+  easing: "easeOutExpo",
+  duration: 1400,
+  delay: (el, i) => 30 * i,
+});
+
+let container = document.querySelector('.hero-image');
+let image = container.querySelector('img');
+let heroText = document.querySelector('.hero-h1-container');
+
+let tl = gsap.timeline();
+
+
+
+// Delay the entire timeline by 2 seconds (adjust the time as needed)
+gsap.delayedCall(1, () => {
+  tl.set(container, { autoAlpha: 1 });
+tl.from(container, 1.5, {
+  yPercent: 100,
+  ease: Power2.out,
+});
+tl.from(image, 1.5, {
+  yPercent: -100,
+  delay: -1.5,
+  ease: Power2.out,
+});
+tl.to(heroText, 1.5, {
+  translateY: -75,
+  delay: -1.5,
+  ease: Power2.out,
+});
+});
+

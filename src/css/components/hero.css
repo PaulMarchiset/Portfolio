@@ -1,37 +1,52 @@
+.hero-section {
+    width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+    height: calc(100vh - 2 * 3.125rem); /* Subtract top and bottom margin */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1.25rem;
+    margin: 3.125rem; /* Add margin around the grid */
+}
+
 .hero {
-    background-image: url(/assets/img/portfolio_paper.png);
-    font-family: "kepler-std-display", serif;
-    font-weight: 700;
-    font-style: normal;
+    position: relative;
+    grid-column: 1 / 9;
+    grid-row: 4 / 6;
+    
+}
+
+.hero-h1-container {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero-h1 {
+font-size: 3.5rem;
+line-height: 85.214%;
+margin: 0;
+font-weight: 500;
+overflow: hidden;
+}
+
+.hero-h1 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+.hero-image {
+    
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* 100% of the viewport height */
     flex-direction: column;
-}
-
-.hero-container {
-    text-align: center; /* Center text within the container */
-}
-
-.hero h1 {
-    font-size: 5em;
-    text-align: center;
-}
-
-.hero h3 {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.hero-scroll {
-    display: none;
-}
-
-@media (min-width: 1024px) {
-    .hero-scroll {
-        display: block;
-        position: absolute;
-        bottom: 10vh;
-    }
+    justify-content: center;
+    align-items: center;    
+    grid-column: 1 / 9;
+    grid-row: 5 / 8;
+    visibility: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  overflow: hidden;
 }

@@ -1,140 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Paul Marchiset</title>
     <meta name="copyright" content="Copyright 2023 Paul Marchiset" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://use.typekit.net/bqc3euf.css" />
     <link rel="stylesheet" href="/src/css/style.css" />
     <link
       rel="shortcut icon"
       href="/assets/icons/LOGO_PM.svg"
       type="image/x-icon"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-    <div class="hero">
-      <div class="hero-container">
-        <h1>Paul</h1>
-        <h1>Marchiset</h1>
-        <h3>Videomaker/Webdesigner</h3>
-      </div>
-      <a href="#works"
-        ><svg
-          class="hero-scroll"
-          width="24"
-          height="37"
-          viewBox="0 0 24 37"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g id="scroll-mouse">
-            <rect
-              id="mouse"
-              x="1.6875"
-              y="2.32812"
-              width="20.625"
-              height="32.3438"
-              rx="10.3125"
-              stroke="black"
-              stroke-width="2.8125"
-            />
-            <path
-              class="scroll"
-              d="M12 28.1094L12 19.6719"
-              stroke="black"
-              stroke-width="2.8125"
-              stroke-linecap="round"
-            />
-          </g></svg
-      ></a>
-    </div>
-    <div class="main-portfolio" id="works">
-      <header>
-        <a href="index.html"
-          ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
-        /></a>
-        <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
-        </button>
-        <nav
-          :class="menuIsOpen && 'menu_open'"
-          x-transition.opacity
-          class="menu"
-        >
-          <div>
-            <a href="/index.html"
-              ><img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM"
-            /></a>
-            <button @click="menuIsOpen = ! menuIsOpen" class="menu_btn">
-              <span class="close"></span>
-              <span class="close"></span>
-            </button>
-          </div>
-          <ul>
-            <li><a class="menu-nav" href="index.html#works">Works</a></li>
-            <li><a class="menu-nav" href="about.html">About Me</a></li>
-            <li><a class="menu-nav" href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <ul class="works-container">
-          <li class="works-container-card">
-            <div class="works-container-description">
-              <h3>3D TROPHY</h3>
-              <h5>2023</h5>
-              <p>Illustrator / Dimension</p>
-            </div>
-            <a id="container" href="">
-              <img id="inner" src="/assets/img/trophy_V1.png" alt="" />
-            </a>
-          </li>
-          <li class="works-container-card">
-            <div class="works-container-description">
-              <h3>REALISTIC</h3>
-              <h5>2023</h5>
-              <p>Figma / Vue.JS / Tailwind</p>
-            </div>
-            <a id="container" href="">
-              <img id="inner" src="/assets/img/test-realistic-portfolio.png" alt="" />
-            </a>
-          </li>
-          <li class="works-container-card">
-            <div class="works-container-description">
-              <h3>ROCCAT</h3>
-              <h5>2023</h5>
-              <p>Premiere Pro</p>
-            </div>
-            <a id="container" href="">
-              <video autoplay loop src="/assets/video/roccat_cinemagraph.mp4"></video>
-            </a>
-          </li>
-        </ul>
-      </main>
-      <footer>
-        <img src="/assets/icons/LOGO_PM.svg" alt="LOGO PM" />
-        <a href="mailto:contact@paulmarchiset.me">contact@paulmarchiset.me</a>
-        <div>
-          <a href="https://www.instagram.com/paul.h264/"
-            ><img src="/assets/icons/INSTA.svg" alt=""
-          /></a>
-          <a href="https://www.x.com/PaulMarchiset/"
-            ><img src="/assets/icons/X.svg" alt=""
-          /></a>
-          <a href="https://www.linkedin.com/in/paulmarchiset/"
-            ><img src="/assets/icons/IN.svg" alt=""
-          /></a>
+    <header>
+      <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
+    </header>
+    <main class="hero-section">
+      <div class="hero" id="hero">
+        <div class="hero-h1-container">
+          <h1 class="hero-h1 paul">PAUL</h1>
+          <h1 class="hero-h1 marchiset">MARCHISET</h1>
         </div>
-      </footer>
+        
+        </div>
+          <div class='hero-image'>
+            <img src='/assets/img/hero-img.png'>
+          </div>
+      </div>
+    </main>
+    <div class="menu">
+      <a href="/index.html">WORKS</a>
+      <a href="/about.html">ABOUT ME</a>
+      <a href="/contact.html">CONTACT</a>
     </div>
   </body>
-
   <script src="/src/js/anime.js"></script>
 </html>

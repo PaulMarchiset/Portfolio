@@ -1,0 +1,84 @@
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-primary);
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+  }
+
+.hero {
+    grid-column: 3 / 15;
+    grid-row: 3 / 13;
+    display: grid;
+    background-color: var(--color-primary);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    
+  }
+  
+  .hero-h1-container {
+    
+    grid-column: 2 / 10;
+    grid-row: 5 / 7;
+  }
+
+  .hero-h1 {
+    color: white;
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  
+  .hero-h1 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .hero-h1 {
+    display: none;
+    margin: 0;
+    line-height: 1;
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .hero nav {
+    grid-column: 9 / 12;
+    grid-row: 3 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  
+  .hero nav a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  
+  .hero nav a:hover {
+    color: black;
+  }
+  
+  @media screen and (min-width: 850px) {
+    .hero {
+    background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+  
+    .hero h1 {
+      display: block;
+    }
+  
+    .hero nav a {
+      color: var(--color-text);
+    }
+  }

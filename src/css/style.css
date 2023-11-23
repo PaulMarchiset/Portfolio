@@ -1,19 +1,26 @@
-  /*normalize*/
-  @import "vendors/normalize.css";
+/*normalize*/
+@import "vendors/normalize.css";
 
-  /*base*/
-  @import "base/main.css";
-  @import "base/media.css";
-  
-  /*layout*/
-  @import "layout/header.css";
-  @import "layout/footer.css";
-  @import "layout/section.css";
-  
-  /*components*/
-  @import "components/menu.css";
+/* utils */
+@import "utils/variables.css";
+
+/*base*/
+@import "base/main.css";
+@import "base/media.css";
+
+/*layout*/
+@import "layout/header.css";
+@import "layout/footer.css";
+@import "layout/section.css";
+
+/*components*/
+@import "components/menu.css";
 @import "components/hero.css";
 @import "components/button.css";
-  
-  /* fonts */
- @import url("https://use.typekit.net/bqc3euf.css");
+
+/* fonts */
+@import url("https://use.typekit.net/bqc3euf.css");
+@font-face {
+  font-family: "bahnschrift";
+  src: url("src/fonts/bahnschrift.ttf") format("truetype");
+}
