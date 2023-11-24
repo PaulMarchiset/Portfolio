@@ -18,3 +18,27 @@ img {
     object-fit: cover;
     transform-origin: left;
   }
+
+  .container {
+    width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+    height: calc(100vh - 2 * 3.125rem); /* Subtract top and bottom margin */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1.25rem;
+    margin: 3.125rem; /* Add margin around the grid */
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure the sections are in a single row */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory;/* Enable scroll-snap on the X-axis */
+  /* Additional styling, such as height, width, etc. */
+}
+
+section {
+  flex: 0 0 100%; /* Each section takes 100% of the container width */
+  scroll-snap-align: start; /* Snap each section to the start of the container */
+  /* Additional styling for each section */
+}

@@ -39,17 +39,17 @@ gsap.delayedCall(1, () => {
   tl.set(container, { autoAlpha: 1 });
 tl.from(container, 1.5, {
   yPercent: 100,
-  ease: Power2.out,
+  ease: Power3.out,
 });
 tl.from(image, 1.5, {
   yPercent: -100,
   delay: -1.5,
-  ease: Power2.out,
+  ease: Power3.out,
 });
-tl.to(heroText, 1.5, {
-  translateY: -75,
-  delay: -1.5,
-  ease: Power2.out,
+tl.to(heroText, 1.25, {
+  translateY: -65,
+  delay: -1.25,
+  ease: Power3.out,
 });
 });
 

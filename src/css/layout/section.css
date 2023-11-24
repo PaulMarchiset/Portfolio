@@ -1,0 +1,38 @@
+.design-img {
+    grid-column: 1 / 9;
+    grid-row: 2 / 7;
+    display: block;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.design-content {
+    grid-column: 1/ 9;
+    grid-row: 7 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.design-content h2 {
+    line-height: 85.214%;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+}
+
+.design-content h3 {
+    font-size: 2.5rem;
+font-stretch: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+}
+
+.randall {
+    background-image: url(/assets/img/randall.png);
+}
