@@ -14,29 +14,47 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
   </head>
   <body>
     <header>
       <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
     </header>
-    <body>
-
-        <div id="section1" class="section">
-          <div class="content">Content for Section 1</div>
-        </div>
-        <div id="section2" class="section">
-          <div class="content">Content for Section 2</div>
-        </div>
-        <div id="section3" class="section">
-          <div class="content">Content for Section 3</div>
-        </div>
-        <div id="section4" class="section">
-          <div class="content">Content for Section 4</div>
-        </div>
-        <div id="section5" class="section">
-          <div class="content">Content for Section 5</div>
-        </div>
+    <main>
+      <div class="project-wrapper" id="randall">
+        <section class="project-container1">
+          <h2>RANDALL TYPEFACE</h2>
+          <div class="project-image-main"></div>
+        </section>
+        <section class="project-container2">
+          <div class="project-image-second"></div>
+        </section>
+        <section class="project-container3">
+          <div class="project-content project-designer">
+            <h4>designer</h4>
+            <h5>paul marchiset</h5>
+          </div>
+          <div class="project-content project-client">
+            <h4>client</h4>
+            <h5>vanier college</h5>
+          </div>
+          <div class="project-content project-softwares">
+            <h4>softwares</h4>
+            <h5>illustrator / fontlab 7</h5>
+          </div>
+          <div class="project-content project-date">
+            <h4>date</h4>
+            <h5>2023</h5>
+          </div>
+        </section>
+        <section class="project-container4">
+          <div class="project-image-sketches"></div>
+        </section>
+        <section class="project-container5">
+          <div class="project-image-final"></div>
+        </section>
+      </div>
+    </main>
     <nav class="menu">
       <a href="/works.html">WORKS</a>
       <a href="/about.html">ABOUT ME</a>
@@ -44,75 +62,17 @@
     </nav>
   </body>
   <style scoped>
-    .section {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
-      position: relative;
+    main {
+      overflow-x: visible;
     }
-
-    .content {
-      position: absolute;
-    }
-    
-#section1 {
-    background-color: red;
-}
-
-#section2 {
-    background-color: blue;
-}
-
-#section3 {
-    background-color: green;
-
-}
-
-#section4 {
-    background-color: yellow;
-
-}
-
-#section5 {
-    background-color: purple;
-}
   </style>
-
   <script>
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    // gsap.utils.toArray('.section').forEach((section, index) => {
-    //   const trigger = section;
-    //   const start = 'top top';
-    //   const end = `+=${index === 4 ? '' : '100%'}`;
+    function smoothScroll(target) {
+      gsap.to(window, { duration: 1, scrollTo: target });
+    }
 
-    //   gsap.fromTo(section, { y: '0%' }, {
-    //     y: index % 2 === 0 ? '-100%' : '100%',
-    //     scrollTrigger: {
-    //       trigger,
-    //       start,
-    //       end,
-    //       scrub: true,
-    //       markers: true, // Set to false in production
-    //     },
-    //   });
-    // });
-
-    gsap.to(".section", {
-      yPercent: -100 * 5,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".section",
-        pin: true,
-        scrub: 1,
-        markers: true,
-        snap: 1 / (5 - 1),
-        // base vertical scrolling on how wide the container is so it feels more natural.
-        end: () => "+=" + document.querySelector(".section").offsetWidth,
-      },
-    });
-
+    smoothScroll("#randall");
   </script>
 </html>

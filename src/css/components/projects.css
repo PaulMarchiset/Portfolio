@@ -1,0 +1,142 @@
+.project-wrapper section {
+  position: sticky;
+  top: 0;
+  width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+  height: calc(100vh - 2 * 3.125rem); /* Subtract top and bottom margin */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 1.25rem;
+  padding: 3.125rem; /* Add margin around the grid */
+}
+
+.project-container1 {
+  background-color: #020202;
+  z-index: 1;
+}
+
+.project-container1 h2 {
+  font-size: 3.5rem;
+  grid-row: 3/4;
+  grid-column: 1/9;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+    margin: 0;
+}
+
+.project-image-main {
+    grid-row: 4/8;
+    grid-column: 1/9;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+}
+
+.project-container2 {
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.project-image-second {
+    grid-row: 3/8;
+    grid-column: 1/9;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project-container3 {
+  background-color: #020202;
+    z-index: 3;
+}
+
+.project-content {
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.25rem;
+    color: #ffffff;
+}
+
+.project-content h4 {
+    font-size: 1.5rem;
+    grid-column: 1/5;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.project-content h5 {
+    font-family: var(--font-family-secondary);
+    font-weight: 300;
+    font-size: 1.5rem;
+    grid-column: 5/9;
+    text-align: left;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.project-designer {
+    grid-row: 4/5;
+}
+
+.project-client {
+    grid-row: 5/6;
+}
+
+.project-softwares {
+    grid-row: 6/7;
+}
+
+.project-date {
+    grid-row: 7/8;
+}
+
+.project-container4 {
+  background-color: #ffffff;
+  z-index: 4;
+}
+
+.project-image-sketches {
+    grid-row: 3/8;
+    grid-column: 1/9;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project-container5 {
+  background-color: #020202;
+    z-index: 5;
+}
+
+.project-image-final {
+    grid-row: 3/8;
+    grid-column: 1/9;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+}
+
+#randall .project-image-main {
+    background-image: url(/assets/img/design/randall/randall.png);
+}
+
+#randall .project-image-second {
+    background-image: url(/assets/img/design/randall/randall-synopsis.svg);
+}
+
+#randall .project-image-sketches {
+    background-image: url(/assets/img/design/randall/randall-sketches.png);
+}
+
+#randall .project-image-final {
+    background-image: url(/assets/img/design/randall/randall-final.png);
+}

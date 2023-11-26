@@ -18,6 +18,7 @@
     width: -webkit-fill-available;
     padding-inline: 3.125rem;
     mix-blend-mode: difference;
+    z-index: 100;
 }
 
 .menu a {
