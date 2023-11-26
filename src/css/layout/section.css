@@ -44,6 +44,8 @@
   font-family: var(--font-family-secondary);
   font-weight: 200;
   margin: 0;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .design-img {

@@ -46,6 +46,7 @@ section {
 .bio {
   position: sticky;
   left: 0;
+  background-color: #020202;
 }
 
 .me {
