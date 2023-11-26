@@ -1,26 +1,57 @@
 .works {
-    grid-column: 1 / 9;
-    grid-row: 3 / 8;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-    font-size: 3.5rem;
+  grid-column: 1 / 9;
+  grid-row: 3 / 8;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  font-size: 3.5rem;
 }
 
+.design-text, .web-text, .photo-text, .video-text {
+  font-size: 3.5rem;
+  line-height: 85.214%;
+  margin: 0;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.design-text .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.web-text .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.photo-text .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.video-text .letter {
+  display: inline-block;
+  line-height: 1em;
+}
 
 .menu {
-    position: fixed;
-    bottom: 3.125rem;
-    display: flex;
-    justify-content: space-between;
-    width: -webkit-fill-available;
-    padding-inline: 3.125rem;
-    mix-blend-mode: difference;
-    z-index: 100;
+  position: fixed;
+  bottom: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+  padding-inline: 3.125rem;
+  mix-blend-mode: difference;
+  z-index: 100;
+}
+
+.menu.photo {
+    mix-blend-mode: normal;
 }
 
 .menu a {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }

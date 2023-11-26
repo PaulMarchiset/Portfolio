@@ -1,40 +1,123 @@
-.design-img {
+.about-me {
+  grid-column: 6 / 9;
+  grid-row: 2/3;
+  color: #fff;
+  position: relative;
+}
+
+.about-me h2 {
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.about-img {
+  grid-column: 1 / 9;
+  grid-row: 3 / 8;
+  display: block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/main/about-img.png);
+}
+
+.about-arrow {
+  grid-column: 6 / 9;
+  grid-row: 8 / 9;
+}
+
+.about-img-2 {
     grid-column: 1 / 9;
-    grid-row: 2 / 7;
+    grid-row: 3 / 6;
     display: block;
     background-size: cover;
     background-position: center;
+    background-image: url(/assets/img/photo/maison_gaspesie.jpg);
+}
 
+.about-content {
+  grid-column: 1 / 9;
+  grid-row: 6 / 9;
+  font-size: 1rem;
+  font-family: var(--font-family-secondary);
+  font-weight: 200;
+  margin: 0;
+}
+
+.design-img {
+  grid-column: 1 / 9;
+  grid-row: 2 / 7;
+  display: block;
+  background-size: cover;
+  background-position: center;
 }
 
 .design-content {
-    grid-column: 1/ 9;
-    grid-row: 7 / 9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: right;
+  grid-column: 1/ 9;
+  grid-row: 7 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .design-content h2 {
-    line-height: 85.214%;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    margin: 0;
-    font-weight: 600;
+  line-height: 85.214%;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
 }
 
 .design-content h3 {
-    font-size: 2.5rem;
-font-stretch: normal;
-font-weight: 400;
-line-height: normal;
-margin: 0;
+  font-size: 2.5rem;
+  font-stretch: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
 }
 
 .randall {
-    background-image: url(/assets/img/design/randall/randall.png);
+  background-image: url(/assets/img/design/randall/randall.png);
 }
 
+#gaspesie .container {
+  background-image: url(/assets/img/photo/maison_gaspesie.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
+#montreal .container {
+  background-image: url(/assets/img/photo/montreal_2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-content {
+  grid-column: 1/ 9;
+  grid-row: 7 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.photo-content h2 {
+  line-height: 85.214%;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+}
+
+.photo-content h3 {
+  font-size: 2.5rem;
+  font-stretch: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}

@@ -26,30 +26,27 @@ anime.timeline({ loop: false }).add({
   delay: (el, i) => 30 * i,
 });
 
-let container = document.querySelector('.hero-image');
-let image = container.querySelector('img');
-let heroText = document.querySelector('.hero-h1-container');
+let container = document.querySelector(".hero-image");
+let image = container.querySelector("img");
+let heroText = document.querySelector(".hero-h1-container");
 
 let tl = gsap.timeline();
-
-
 
 // Delay the entire timeline by 2 seconds (adjust the time as needed)
 gsap.delayedCall(1, () => {
   tl.set(container, { autoAlpha: 1 });
-tl.from(container, 1.5, {
-  yPercent: 100,
-  ease: Power3.out,
+  tl.from(container, 1.5, {
+    yPercent: 100,
+    ease: Power3.out,
+  });
+  tl.from(image, 1.5, {
+    yPercent: -100,
+    delay: -1.5,
+    ease: Power3.out,
+  });
+  tl.to(heroText, 1.25, {
+    translateY: -65,
+    delay: -1.25,
+    ease: Power3.out,
+  });
 });
-tl.from(image, 1.5, {
-  yPercent: -100,
-  delay: -1.5,
-  ease: Power3.out,
-});
-tl.to(heroText, 1.25, {
-  translateY: -65,
-  delay: -1.25,
-  ease: Power3.out,
-});
-});
-

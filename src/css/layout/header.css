@@ -17,3 +17,7 @@ header img {
     object-fit: contain;
     object-position: center;
 }
+
+header.photo {
+    mix-blend-mode: normal;
+}

@@ -26,7 +26,7 @@ img {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(9, 1fr);
     gap: 1.25rem;
-    margin: 3.125rem; /* Add margin around the grid */
+    padding: 3.125rem; /* Add margin around the grid */
 }
 
 main {
@@ -41,4 +41,13 @@ section {
   flex: 0 0 100%; /* Each section takes 100% of the container width */
   scroll-snap-align: start; /* Snap each section to the start of the container */
   /* Additional styling for each section */
+}
+
+.bio {
+  position: sticky;
+  left: 0;
+}
+
+.me {
+  background-color: #fff;
 }
