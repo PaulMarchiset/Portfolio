@@ -19,6 +19,7 @@
       <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
     </header>
     <main class="hero-section">
+      <div class="hero-container"></div>
       <div class="hero" id="hero">
         <div class="hero-h1-container">
           <h1 class="hero-h1 paul">PAUL</h1>
@@ -30,6 +31,12 @@
             <img src='/assets/img/main/hero-img.png'>
           </div>
       </div>
+      <nav class="hero-works">
+        <a href="/pages/design/design.html" class="design-text" id="design">DESIGN</a>
+        <a href="/pages/web/web.html" class="web-text" id="web">WEB</a>
+        <a href="/pages/video/video.html" class="video-text" id="video">VIDEO</a>
+        <a href="/pages/photo/photo.html" class="photo-text" id="photo">PHOTO</a>
+      </nav>
     </main>
     <div class="menu">
       <a href="/works.html">WORKS</a>
@@ -37,5 +44,14 @@
       <a href="/contact.html">CONTACT</a>
     </div>
   </body>
+  <style>
+    @media screen and (min-width: 768px) {
+      main {
+        overflow: hidden;
+      }
+      
+    }
+  </style>
   <script src="/src/js/anime.js"></script>
+  <script src="/src/js/menu.js"></script>
 </html>

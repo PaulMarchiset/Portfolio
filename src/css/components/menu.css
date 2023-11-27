@@ -2,7 +2,7 @@
   grid-column: 1 / 9;
   grid-row: 3 / 8;
   color: #fff;
-  display: flex;
+    display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
@@ -10,7 +10,6 @@
 }
 
 .design-text, .web-text, .photo-text, .video-text {
-  font-size: 3.5rem;
   line-height: 85.214%;
   margin: 0;
   font-weight: 500;
@@ -54,4 +53,11 @@
 
 .menu a {
   font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    justify-content: center;
+    gap: 5vw;
+  }
 }

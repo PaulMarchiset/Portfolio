@@ -86,6 +86,10 @@
   background-image: url(/assets/img/design/randall/randall.png);
 }
 
+.museum {
+  background-image: url(/assets/img/design/museum/typography.png);
+}
+
 #gaspesie .container {
   background-image: url(/assets/img/photo/maison_gaspesie.jpg);
   background-size: cover;
@@ -122,4 +126,57 @@
   font-weight: 400;
   line-height: normal;
   margin: 0;
+}
+
+.video-img {
+    grid-column: 1 / 9;
+    grid-row: 2 / 7;
+    display: block;
+    background-size: cover;
+    background-position: center;
+  }
+
+#chapelle .video-img {
+    background-image: url(/assets/img/video/chapelle.jpg);
+}
+
+#apartment .video-img {
+    background-image: url(/assets/img/video/apartment.png);
+}
+
+#webtv .video-img {
+  background-image: url(/assets/img/video/jpo-webtv.jfif);
+}
+
+#course .video-img {
+  background-image: url(/assets/img/video/cardnf.png);
+}
+
+#ge2i .video-img {
+  background-image: url(/assets/img/video/ge2i.png);
+}
+
+#utw .video-img {
+  background-image: url(/assets/img/video/utw.png);
+}
+
+#roccat .video-img {
+  background-image: url(/assets/img/video/roccat.jpg);
+}
+
+@media screen and (min-width: 768px) {
+    .design-img, .video-img {
+        grid-column: 2 / 5;
+        grid-row: 2 / 9;
+      }
+      
+      .design-content, .photo-content {
+        grid-column: 6/ 8;
+        grid-row: 3 / 5;
+      }
+      .design-content, .photo-content h2 {
+        font-size: 5rem;
+      }
+
+
 }

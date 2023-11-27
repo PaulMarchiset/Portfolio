@@ -26,6 +26,11 @@ anime.timeline({ loop: false }).add({
   delay: (el, i) => 30 * i,
 });
 
+
+const windowSize = window.innerWidth;
+
+if (windowSize < 768) {
+
 let container = document.querySelector(".hero-image");
 let image = container.querySelector("img");
 let heroText = document.querySelector(".hero-h1-container");
@@ -49,4 +54,5 @@ gsap.delayedCall(1, () => {
     delay: -1.25,
     ease: Power3.out,
   });
-});
+}); }
+

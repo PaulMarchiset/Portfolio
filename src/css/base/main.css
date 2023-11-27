@@ -19,6 +19,10 @@ img {
     transform-origin: left;
   }
 
+  .screen {
+    display: none;
+  }
+
   .container {
     width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
     height: calc(100vh - 2 * 3.125rem); /* Subtract top and bottom margin */
@@ -52,3 +56,4 @@ section {
 .me {
   background-color: #fff;
 }
+
