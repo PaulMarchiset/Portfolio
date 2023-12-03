@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TH.G - Paul Marchiset</title>
+    <meta name="copyright" content="Copyright 2023 Paul Marchiset" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/LOGO_PM.svg"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+  </head>
+  <style>
+    main {
+      display: block;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <header>
+      <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
+    </header>
+    <main>
+      <div class="project-wrapper" id="thg">
+        <section class="project-container1">
+          <h2>TrackHunter.Game</h2>
+          <div class="project-image-main"></div>
+        </section>
+        <section class="project-container3">
+          <div class="project-content project-designer">
+            <h4>Skills</h4>
+            <h5>Webdesign / Front-end</h5>
+          </div>
+          <div class="project-content project-client">
+            <h4>client</h4>
+            <h5>MMI Montbéliard</h5>
+          </div>
+          <div class="project-content project-softwares">
+            <h4>development</h4>
+            <h5>Wordpress</h5>
+          </div>
+          <div class="project-content project-date">
+            <h4>date</h4>
+            <h5>2023</h5>
+          </div>
+        </section>
+        <section class="project-container5">
+          <a href="https://trackhuntergame.paulmarchiset.me" class="project-web-final">
+            <img src="/assets/img/web/thg.png" alt="website trackhunter">
+            <p>visit the site</p>
+          </a>
+          
+        </section>
+      </div>
+    </main>
+    <nav class="menu">
+      <a href="/works.html">WORKS</a>
+      <a href="/about.html">ABOUT ME</a>
+      <a href="/contact.html">CONTACT</a>
+    </nav>
+  </body>
+  <style scoped>
+    main {
+      overflow-x: visible;
+    }
+  </style>
+  <script>
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    function smoothScroll(target) {
+      gsap.to(window, { duration: 1, scrollTo: target });
+    }
+
+    smoothScroll("#thg");
+  </script>
+</html>
