@@ -1,7 +1,7 @@
 .project-wrapper section {
   position: sticky;
   top: 0;
-  width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+  width: calc(100% - 2 * 3.125rem); /* Subtract left and right margin */
   height: calc(100vh - 2 * 3.125rem); /* Subtract top and bottom margin */
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -171,6 +171,7 @@
 .project-download:hover {
   background-color: #000000;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .project-download:hover object {
@@ -208,6 +209,21 @@
 #chapelle .project-image-main {
     background-size: cover;
   background-image: url(/assets/img/video/chapelle.jpg);
+}
+
+#apartment .project-image-main {
+    background-size: cover;
+  background-image: url(/assets/img/video/apartment.png);
+}
+
+#webtv .project-image-main {
+    background-size: cover;
+  background-image: url(/assets/img/video/jpo-webtv.jfif);
+}
+
+#course .project-image-main {
+    background-size: cover;
+  background-image: url(/assets/img/video/cardnf.png);
 }
 
 @media screen and (min-width: 768px) {

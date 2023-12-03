@@ -116,7 +116,7 @@
 
 .video-container {
   flex: none;
-  width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+  width: calc(100% - 2 * 3.125rem); /* Subtract left and right margin */
   display: flex;
   gap: 3.5rem;
   padding: 8.1875rem 3.125rem;
