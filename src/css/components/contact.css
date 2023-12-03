@@ -1,0 +1,43 @@
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+}
+
+.contact p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+    font-family: var(--font-family-secondary);
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #fff;
+    cursor: pointer;
+    width: fit-content;
+}
+
+/* #mail:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+
+#mail:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+} */
