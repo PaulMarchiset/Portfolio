@@ -121,6 +121,7 @@ anime.timeline({ loop: false }).add({
     link.addEventListener('mouseover', function() {
       let image = this.getAttribute('id') + '.jpg'; // assuming the images are named as id.jpg
       heroContainer.style.backgroundImage = `url('/assets/img/menu/${image}')`; // replace 'path/to/images/' with your actual image path
+      heroContainer.style.animation = 'fadeIn 0.5s forwards';
       this.style.color = 'white';; 
       links.forEach(otherLink => {
         if (otherLink !== link) {
@@ -134,5 +135,6 @@ anime.timeline({ loop: false }).add({
     link.addEventListener('mouseout', function() {
       heroContainer.style.backgroundImage = ''; // remove the background image
       this.style.color = 'rgba(255, 255, 255, 0.5)';
+      heroContainer.style.animation = 'fadeOut 0.5s forwards';
     });
   });

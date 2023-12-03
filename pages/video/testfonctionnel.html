@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+
+    }
+    .main-section {
+      width: 300%;
+      height: 100svh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+    }
+
+    section {
+      width: 100vw;
+      height: 100svh;
+    }
+
+    .panel {
+      width: 100vw;
+      height: 100%;
+      transform: translate3d(0px, 0px, 0px)!important;
+    }
+
+    .panel:nth-child(1) {
+      background-color: red;
+      top: 0 !important;
+
+    }
+
+    .panel:nth-child(2) {
+      background-color: orange;
+    }
+
+    .panel:nth-child(3) {
+      background-color: purple;
+    }
+
+    .sous-panel1 {
+        background-color: grey;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="main-section">
+      <section class="panel" id="panel1">
+        <div class="sous-panel1">
+            1
+        </div>
+      </section>
+      <section class="panel" id="panel2">2</section>
+      <section class="panel" id="panel3">3</section>
+    </div>
+  </body>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".main-section",
+        pin: true,
+        scrub: 1,
+        end: "+=5000",
+        markers: false,
+      },
+    });
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#panel1",
+        start: "bottom left",
+        end: "+=90%",
+        pin: true,
+        scrub: true,
+        markers: false,
+      },
+    });
+
+    tl.to(".sous-panel1", { backgroundColor: 'green', scale: '0.9' });
+    tl.to("#panel1", { backgroundColor: 'yellow'});
+  </script>
+</html>

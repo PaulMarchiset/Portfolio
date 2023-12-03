@@ -31,7 +31,7 @@
           ></object>
         </div>
       </section>
-      <section class="bio">
+      <section class="bio" id="bio1">
         <div class="container me">
           <div class="about-img-2"></div>
           <p class="about-content">
@@ -41,9 +41,31 @@
             capacité à assumer des responsabilités et à orienter les opérations
             de manière efficace.
           </p>
+          <div class="about-content-desktop">
+            <p>
+              Durant son échange au Vanier College à Montréal, Paul a eu
+              l'occasion d'approfondir sa passion pour la typographie, en se
+              concentrant sur la conception et la compréhension des caractères.
+            </p>
+            <p>
+              Son intérêt prononcé pour l'audiovisuel l'a conduit à s'investir
+              dans des projets professionnels et scolaires variés, tels que des
+              diffusions en direct, des reportages, des courts-métrages, et des
+              conférences de presse. Cette polyvalence témoigne de sa volonté
+              d'explorer différents aspects du domaine.
+            </p>
+            <p>
+              Au-delà de ses réalisations, Paul Marchiset demeure conscient de
+              la nécessité constante d'apprentissage. Son parcours académique et
+              professionnel reflète son engagement envers l'amélioration
+              continue, cherchant toujours à élargir ses horizons et à relever
+              de nouveaux défis pour son épanouissement personnel et
+              professionnel.
+            </p>
+          </div>
         </div>
       </section>
-      <section class="bio">
+      <section class="bio" id="bio2">
         <div class="container">
           <div class="about-img-2"></div>
           <p class="about-content">
@@ -53,7 +75,7 @@
           </p>
         </div>
       </section>
-      <section class="bio">
+      <section class="bio" id="bio3">
         <div class="container me">
           <div class="about-img-2"></div>
           <p class="about-content">
@@ -65,7 +87,7 @@
           </p>
         </div>
       </section>
-      <section class="bio">
+      <section class="bio" id="bio4">
         <div class="container">
           <div class="about-img-2"></div>
           <p class="about-content">
@@ -84,5 +106,14 @@
       <a href="/contact.html">CONTACT</a>
     </nav>
   </body>
+  <script>
+    anime({
+      targets: ".about-arrow",
+      translateX: 10,
+      direction: "alternate",
+      loop: true,
+      easing: "easeInOutSine",
+    });
+  </script>
   <script src="/src/js/script.js"></script>
 </html>

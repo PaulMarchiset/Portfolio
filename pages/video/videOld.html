@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Video - Paul Marchiset</title>
+    <meta name="copyright" content="Copyright 2023 Paul Marchiset" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/LOGO_PM.svg"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <style>
+    body {
+      overscroll-behavior: none;
+      height: 100vh;
+      color: white;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .video-container {
+      overscroll-behavior: none;
+      width: 200%;
+      height: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+
+    section {
+      width: 100vw;
+      height: 100%;
+      flex: none;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .purple {
+      background-color: purple;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .gray {
+      background-color: gray;
+    }
+  </style>
+  <body>
+    <!-- <main>
+      <div id="pinContainer">
+        <div id="slideContainer">
+          <section class="panel blue">
+            <b>ONE</b>
+          </section>
+          <section class="panel turqoise">
+            <b>TWO</b>
+          </section>
+          <section class="panel green">
+            <b>THREE</b>
+          </section>
+          <section class="panel bordeaux">
+            <b>FOUR</b>
+          </section>
+        </div>
+      </div>
+    </main> -->
+    <!-- 
+
+    <div class="container2">
+      <section class="panel red">
+        ONE
+      </section>
+      <section class="panel orange">
+        TWO
+      </section>
+      <section class="panel purple">
+        THREE
+      </section>
+      <section class="panel green">
+        FOUR
+      </section>
+      <section class="panel gray">
+        FIVE
+      </section>
+    
+    </div> -->
+
+    <header class="photo">
+      <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
+    </header>
+    <main>
+      <div class="video-container">
+        <section class="panel">
+          <a href="#" class="video-wrapper">
+            <video src="/assets/video/roccat_cinemagraph.mp4"></video>
+            <div class="video-content">
+              <h2>Chapelle</h2>
+              <h3>2023</h3>
+            </div>
+          </a>
+        </section>
+        <section class="panel">
+          <a href="#" class="video-wrapper" id="apartment">
+            <video src="/assets/video/roccat_cinemagraph.mp4"></video>
+            <div class="video-content">
+              <h2>The Apartment</h2>
+              <h3>2023</h3>
+            </div>
+          </a>
+        </section>
+      </div>
+    </main>
+    <nav class="menu photo">
+      <a href="/works.html">WORKS</a>
+      <a href="/about.html">ABOUT ME</a>
+      <a href="/contact.html">CONTACT</a>
+    </nav>
+  </body>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".video-container",
+        pin: true,
+        scrub: 1,
+        // base vertical scrolling on how wide the container is so it feels more natural.
+        end: "+=2000",
+        markers: true,
+      },
+    });
+
+    // const tl = gsap.timeline()
+    //     // Animate to the second panel
+    //     .to("#slideContainer", { duration: 0.5, z: -150 }) // Move back in 3D space
+    //     .to("#slideContainer", { duration: 1, x: "-25%" }) // Move into the first panel
+    //     .to("#slideContainer", { duration: 0.5, z: 0 }) // Move back to the origin in 3D space
+    //     // Animate to the third panel
+    //     .to("#slideContainer", { duration: 0.5, z: -150, delay: 1 })
+    //     .to("#slideContainer", { duration: 1, x: "-50%" })
+    //     .to("#slideContainer", { duration: 0.5, z: 0 })
+    //     // Animate to the fourth panel
+    //     .to("#slideContainer", { duration: 0.5, z: -150, delay: 1 })
+    //     .to("#slideContainer", { duration: 1, x: "-75%" })
+    //     .to("#slideContainer", { duration: 0.5, z: 0 });
+
+    //   // Use GSAP ScrollTrigger to create the animation trigger
+    //   gsap.registerPlugin(ScrollTrigger);
+
+    //   // Create the ScrollTrigger
+    //   gsap.to("#slideContainer", {
+    //     scrollTrigger: {
+    //       trigger: "#pinContainer",
+    //       start: "top top",
+    //       end: "bottom 500%", // Adjust as needed
+    //       pin: "#pinContainer",
+    //       Animation: tl,
+    //       markers: true,
+    //       scrub: 1,
+    //     },
+    //     x: "-100%",
+    //     ease: "none",
+    //   });
+  </script>
+  <!-- <script src="/src/js/script.js"></script> -->
+</html>

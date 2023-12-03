@@ -29,12 +29,12 @@
 }
 
 .about-img-2 {
-    grid-column: 1 / 9;
-    grid-row: 3 / 6;
-    display: block;
-    background-size: cover;
-    background-position: center;
-    background-image: url(/assets/img/photo/maison_gaspesie.jpg);
+  grid-column: 1 / 9;
+  grid-row: 3 / 6;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/assets/img/main/paul-1.jpg);
 }
 
 .about-content {
@@ -46,6 +46,10 @@
   margin: 0;
   color: #fff;
   mix-blend-mode: difference;
+}
+
+.about-content-desktop {
+  display: none;
 }
 
 .design-img {
@@ -90,93 +94,145 @@
   background-image: url(/assets/img/design/museum/typography.png);
 }
 
-#gaspesie .container {
-  background-image: url(/assets/img/photo/maison_gaspesie.jpg);
-  background-size: cover;
-  background-position: center;
+.photo-container {
+  flex: none;
+  width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+  display: flex;
+  gap: 1.25rem;
+  padding: 8.1875rem 3.125rem;
+  flex-wrap: wrap;
 }
 
-#montreal .container {
-  background-image: url(/assets/img/photo/montreal_2.jpg);
-  background-size: cover;
-  background-position: center;
+.photo-img {
+  display: block;
+  width: auto;
 }
 
-.photo-content {
-  grid-column: 1/ 9;
-  grid-row: 7 / 9;
+.photo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-container {
+  flex: none;
+  width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+  display: flex;
+  gap: 3.5rem;
+  padding: 8.1875rem 3.125rem;
+  flex-direction: column;
+}
+
+.video-wrapper img {  
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.video-content  {
+  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: flex-end;
+  margin-top: 1.25rem;
   text-align: right;
 }
 
-.photo-content h2 {
+.video-content h2 {
   line-height: 85.214%;
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   margin: 0;
   font-weight: 600;
 }
 
-.photo-content h3 {
-  font-size: 2.5rem;
+.video-content h3 {
+  font-size: 2rem;
   font-stretch: normal;
   font-weight: 400;
   line-height: normal;
   margin: 0;
 }
 
-.video-img {
+@media screen and (min-width: 768px) {
+  .about-me {
     grid-column: 1 / 9;
-    grid-row: 2 / 7;
-    display: block;
-    background-size: cover;
-    background-position: center;
   }
 
-#chapelle .video-img {
-    background-image: url(/assets/img/video/chapelle.jpg);
-}
+  .about-img-2 {
+    grid-column: 2 / 5;
+    grid-row: 2 / 9;
+  }
 
-#apartment .video-img {
-    background-image: url(/assets/img/video/apartment.png);
-}
+  .about-content {
+    display: none;
+  }
 
-#webtv .video-img {
-  background-image: url(/assets/img/video/jpo-webtv.jfif);
-}
+  .about-content-desktop {
+    display: block;
+    grid-column: 6 / 8;
+    grid-row: 2 / 9;
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+    mix-blend-mode: difference;
+  }
 
-#course .video-img {
-  background-image: url(/assets/img/video/cardnf.png);
-}
+  .about-content-desktop p {
+    
+    font-family: var(--font-family-secondary);
+    font-weight: 200;
+  }
 
-#ge2i .video-img {
-  background-image: url(/assets/img/video/ge2i.png);
-}
+  #bio2, #bio3, #bio4 {
+    display: none;
+  }
+  .video-container {
+    padding: 3.125rem;
+    gap: 0;
+  }
+  .video-wrapper {
+    display: grid;
+    width: calc(100vw - 2 * 3.125rem); 
+    height: calc(100vh - 2 * 3.125rem);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1.25rem;
+  }
+  .video-wrapper img {
+    grid-column: 2 / 6;
+    grid-row: 3 / 8;
+  }
 
-#utw .video-img {
-  background-image: url(/assets/img/video/utw.png);
-}
+  .video-content {
+    grid-column: 6/ 8;
+    grid-row: 3 / 5;
+  }
 
-#roccat .video-img {
-  background-image: url(/assets/img/video/roccat.jpg);
-}
+  .video-content h2 {
+    font-size: 4vw;
+  }
 
-@media screen and (min-width: 768px) {
-    .design-img, .video-img {
-        grid-column: 2 / 5;
-        grid-row: 2 / 9;
-      }
-      
-      .design-content, .photo-content {
-        grid-column: 6/ 8;
-        grid-row: 3 / 5;
-      }
-      .design-content, .photo-content h2 {
-        font-size: 5rem;
-      }
+  .video-content h3 {
+    font-size: 3vw;
+  }
 
+  .design-img {
+    grid-column: 2 / 5;
+    grid-row: 2 / 9;
+  }
 
+  .design-content {
+    grid-column: 6/ 8;
+    grid-row: 3 / 5;
+  }
+  .design-content {
+    font-size: 5rem;
+  }
+  .photo-img {
+    height: 45vh;
+  }
 }

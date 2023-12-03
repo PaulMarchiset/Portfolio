@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+ <body>
+    <section class="view">
+        
+        <section class="container">
+        <div class="panel" id="test" ><div class="sous-panel" id="1" >1</div></div>
+        <div class="panel" id="test2"><div class="sous-panel" id="2">2</div></div>
+        <div class="panel" ><div class="sous-panel" id="3">3</div></div>
+        </section>
+    </section>
+   
+
+ </body>
+<style>
+body {
+    margin: 0;
+}
+.view {
+    width: 100vw;
+    height: 100svh;
+}
+
+.container {
+    display: flex;
+    width: 300%;
+    height: 1500%;
+    flex-direction: row;
+}
+    .panel{
+        width: 100vw;
+        height: 100svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        position: fixed;
+        
+       
+    }
+
+    .panel:nth-child(1){
+        background-color: red;
+        z-index: -10;
+    left: 0;
+        top: 0;
+    }
+
+    .panel:nth-child(2){
+        background-color: orange;
+        z-index: 0;
+    left: 100%;
+        top: 0;
+    }
+
+    .panel:nth-child(3){
+        background-color: purple;
+        z-index: 10;
+    left: 200%;
+        top: 0;
+    }
+
+    .sous-panel{
+        background-color: grey;
+        margin: auto;
+    }
+    
+
+</style>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+
+
+    let tl1 = gsap.timeline({
+      scrollTrigger:  {
+        start: "+=500%",
+        end: "+=200px",
+        pin: true,
+        scrub: true,
+        markers: true,
+      },
+    });
+
+
+    tl1.to("#test2", {
+        x: "-100%",
+        ease: "none",
+        });
+    tl1.to("#test", {
+        left:'100%',
+        });
+      
+  </script>
+</html>
