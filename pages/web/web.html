@@ -19,48 +19,113 @@
     <header>
       <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
     </header>
-    <main>
-      <section>
-        <a href="pierre.html" class="container a">
-          <div class="web-img pierre"></div>
-          <div class="design-content">
-            <h2>Pierre Marchiset</h2>
-            <h3>2023</h3>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="realistic.html" class="container b">
-          <div class="web-img realistic"></div>
-          <div class="design-content">
-            <h2>Realistic</h2>
-            <h3>2023</h3>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="thg.html" class="container c">
-          <div class="web-img thg"></div>
-          <div class="design-content">
-            <h2>TH.G</h2>
-            <h3>2023</h3>
-          </div>
-        </a>
-      </section>
-    </main>
+    <div class="view">
+      <div class="web-container">
+        <section id="pierre">
+          <a href="pierre.html" class="container a">
+            <div class="web-img pierre"></div>
+            <div class="design-content">
+              <h2>Pierre Marchiset</h2>
+              <h3>2023</h3>
+            </div>
+          </a>
+        </section>
+        <section id="realistic">
+          <a href="realistic.html" class="container b">
+            <div class="web-img realistic"></div>
+            <div class="design-content">
+              <h2>Realistic</h2>
+              <h3>2023</h3>
+            </div>
+          </a>
+        </section>
+        <section id="thg">
+          <a href="thg.html" class="container c">
+            <div class="web-img thg"></div>
+            <div class="design-content">
+              <h2>TH.G</h2>
+              <h3>2023</h3>
+            </div>
+          </a>
+        </section>
+      </div>
+    </div>
     <nav class="menu">
       <a href="/works.html">WORKS</a>
       <a href="/about.html">ABOUT ME</a>
       <a href="/contact.html">CONTACT</a>
     </nav>
   </body>
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .view {
+      width: 100vw;
+      height: 100svh;
+    }
+
+    .web-container {
+      display: flex;
+      width: 300%;
+      height: 300%;
+      flex-direction: row;
+    }
+    .web-container section {
+      width: 100vw;
+      height: 100svh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+      position: fixed;
+    }
+
+    .web-container section:nth-child(1) {
+      background-color: #020202;
+      z-index: 0;
+      left: 0;
+      top: 0;
+    }
+
+    .web-container section:nth-child(2) {
+      background-color: #020202;
+      z-index: 10;
+      left: 100%;
+      top: 0;
+    }
+
+    .web-container section:nth-child(3) {
+      background-color: #020202;
+      z-index: 20;
+      left: 100%;
+      top: 0;
+    }
+  </style>
   <script>
-    gsap.from("main section", {
-    x: '-400%', // Start from the left side of the window
-    stagger: 0.1, // Stagger the animations for each section
-    duration: 1.5,
-    ease: "power3.out", // Use an easing function for a smooth slide
-  });
+    gsap.registerPlugin(ScrollTrigger);
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        start: "+=50%",
+        end: "+=100%",
+        pin: true,
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    tl.to("#realistic", {
+      x: "-100%",
+      ease: "none",
+    });
+    tl.to("#pierre", {
+      left: "100%",
+    });
+    tl.to("#thg", {
+      left: "0",
+    });
   </script>
   <script src="/src/js/script.js"></script>
 </html>
