@@ -68,64 +68,76 @@
 
     .web-container {
       display: flex;
-      width: 300%;
-      height: 300%;
-      flex-direction: row;
-    }
-    .web-container section {
-      width: 100vw;
-      height: 100svh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 100px;
-      position: fixed;
+      width: 100%;
+      height: 50%;
+      flex-direction: column;
     }
 
-    .web-container section:nth-child(1) {
-      background-color: #020202;
-      z-index: 0;
-      left: 0;
-      top: 0;
-    }
+    @media screen and (min-width: 768px) {
+      .web-container {
+        display: flex;
+        width: 300%;
+        height: 300%;
+        flex-direction: row;
+      }
+      .web-container section {
+        width: 100vw;
+        height: 100svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        position: fixed;
+        background-color: #020202;
+      }
 
-    .web-container section:nth-child(2) {
-      background-color: #020202;
-      z-index: 10;
-      left: 100%;
-      top: 0;
-    }
+      .web-container section:nth-child(1) {
+        z-index: 0;
+        left: 0;
+        top: 0;
+      }
 
-    .web-container section:nth-child(3) {
-      background-color: #020202;
-      z-index: 20;
-      left: 100%;
-      top: 0;
+      .web-container section:nth-child(2) {
+        z-index: 10;
+        left: 100%;
+        top: 0;
+      }
+
+      .web-container section:nth-child(3) {
+        z-index: 20;
+        left: 100%;
+        top: 0;
+      }
     }
   </style>
   <script>
-    gsap.registerPlugin(ScrollTrigger);
+    //generate check if window screen is > 768px
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        start: "+=50%",
-        end: "+=100%",
-        pin: true,
-        scrub: true,
-        markers: true,
-      },
-    });
+    var width = window.innerWidth;
 
-    tl.to("#realistic", {
-      x: "-100%",
-      ease: "none",
-    });
-    tl.to("#pierre", {
-      left: "100%",
-    });
-    tl.to("#thg", {
-      left: "0",
-    });
+    if (width > 768) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          start: "+=50%",
+          end: "+=100%",
+          pin: true,
+          scrub: true,
+          markers: true,
+        },
+      });
+
+      tl.to("#realistic", {
+        x: "-100%",
+        ease: "none",
+      });
+      tl.to("#thg", {
+        left: "0",
+      });
+    } else {
+      console.log("no");
+    }
   </script>
   <script src="/src/js/script.js"></script>
 </html>
