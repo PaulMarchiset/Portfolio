@@ -231,6 +231,18 @@
   background-image: url(/assets/img/design/randall/randall-fontlab.png);
 }
 
+#marchiset .project-image-main {
+  background-image: url(/assets/img/design/museum/logomarchiset.svg);
+}
+
+#marchiset .project-image-final {
+  background-image: url(/assets/img/design/museum/posters.png);
+}
+
+#wine .project-image-main {
+  background-image: url(/assets/img/design/wine/winelabel.svg);
+}
+
 #chapelle .project-image-main {
     background-size: cover;
   background-image: url(/assets/img/video/chapelle.jpg);
@@ -319,6 +331,10 @@
 
   .project-image-final {
     grid-column: 4/6;
+  }
+
+  #marchiset .project-image-final {
+    grid-column: 3/7;
   }
 
   .project-web-final {

@@ -20,9 +20,5 @@
 @import "components/button.css";
 @import "components/projects.css";
 
-/* fonts */
-@import url("https://use.typekit.net/bqc3euf.css");
-@font-face {
-  font-family: "bahnschrift";
-  src: url("src/fonts/bahnschrift.ttf") format("truetype");
-}
+/*font*/
+@import url('https://fonts.googleapis.com/css?family=Outfit:100,200,300,400,500,600,700,800,900&display=swap');

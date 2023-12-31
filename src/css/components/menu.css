@@ -42,6 +42,7 @@
   display: flex;
   justify-content: space-between;
   width: -webkit-fill-available;
+  width: -moz-available;
   padding-inline: 3.125rem;
   mix-blend-mode: difference;
   z-index: 100;

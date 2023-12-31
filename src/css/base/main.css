@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "bahnschrift";
+  src: url("/src/fonts/bahnschrift.ttf") format("truetype");
+}
+
 * {
     font-family: 'bahnschrift', sans-serif;
-    font-stretch: condensed;
+    font-stretch: semi-condensed;
 }
 
 body {

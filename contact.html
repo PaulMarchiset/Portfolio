@@ -19,10 +19,11 @@
       <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
     </header>
     <main>
-        <div class="contact">
-            <p>don't hesitate to contact me</p>
-            <h1 id="mail" type="text">contact@paulmarchiset.me</h1>
-        </div>
+      <div class="contact">
+        <p>click to copy</p>
+          <h1 id="mail" type="text">contact@paulmarchiset.me</h1>
+          
+      </div>
     </main>
     <div class="menu">
       <a href="/works.html">WORKS</a>
@@ -38,32 +39,48 @@
     }
   </style>
   <script>
-    function contactMail() {
-      // Get the text field
-      var copyMail = document.getElementById("mail");
+var mailText = document.querySelector("#mail");
 
-      // Create a temporary input element
-      var tempInput = document.createElement("input");
-      tempInput.value = copyMail.textContent;
+    mailText.innerHTML = mailText.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
 
-      // Append the input element to the body
-      document.body.appendChild(tempInput);
+// Copy email function
+function contactMail() {
+  let copyMail = document.getElementById("mail");
+  let tempInput = document.createElement("input");
+  document.body.appendChild(tempInput);
+  tempInput.value = copyMail.textContent;
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
 
-      // Select the text inside the input element
-      tempInput.select();
-      tempInput.setSelectionRange(0, 99999); // For mobile devices
 
-      // Copy the text inside the input element
-      document.execCommand("copy");
+  // Change the text to "copied"
+  copyMail.textContent = "copied!";
 
-      // Remove the temporary input element
-      document.body.removeChild(tempInput);
+  anime({
+    targets: copyMail,
+    scale: 1.01,
+    duration: 100,
+    direction: "alternate",
+    easing: "easeInOutQuad",
+  });
 
-      // Alert the user
-      alert("Copied the email address: " + copyMail.textContent);
-    }
+  // Change the text back after 3 seconds
+  setTimeout(function() {
+    copyMail.textContent = "contact@paulmarchiset.me";
+  }, 3000);
+}
 
-    // Add event listener to trigger contactMail function
-    document.getElementById("mail").addEventListener("click", contactMail);
+// Add event listener to trigger contactMail function
+document.getElementById("mail").addEventListener("click", contactMail);
+   
+
+
+
+
   </script>
 </html>

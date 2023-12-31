@@ -25,19 +25,26 @@
     width: fit-content;
 }
 
-/* #mail:before {
-    content: "";
+.contact h1 {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+  }
+  
+  .contact h1:after {
+    content: '';
     position: absolute;
     width: 100%;
-    height: 1px;
-    background: #fff;
-    left: 0;
     transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s ease-in-out;
-}
-
-#mail:hover:before {
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 1s cubic-bezier(0.4,0,0,1);
+  }
+  
+  .contact h1:hover:after {
     transform: scaleX(1);
-    transform-origin: left;
-} */
+    transform-origin: bottom left;
+  }
