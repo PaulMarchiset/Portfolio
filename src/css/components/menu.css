@@ -2,14 +2,18 @@
   grid-column: 1 / 9;
   grid-row: 3 / 8;
   color: #fff;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
   font-size: 3.5rem;
+  font-stretch: condensed;
 }
 
-.design-text, .web-text, .photo-text, .video-text {
+.design-text,
+.web-text,
+.photo-text,
+.video-text {
   line-height: 85.214%;
   margin: 0;
   font-weight: 500;
@@ -37,6 +41,8 @@
 }
 
 .menu {
+  font-family: "bahnschrift", sans-serif;
+  font-stretch: normal;
   position: fixed;
   bottom: 3.125rem;
   display: flex;
@@ -49,7 +55,7 @@
 }
 
 .menu.photo {
-    mix-blend-mode: normal;
+  mix-blend-mode: normal;
 }
 
 .menu a {

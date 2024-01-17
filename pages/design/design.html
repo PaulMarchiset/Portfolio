@@ -19,6 +19,38 @@
     <header>
       <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
     </header>
+    <div class="arrow-switch arrow-left">
+      <svg
+        width="56"
+        height="106"
+        viewBox="0 0 56 106"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M1.07507 53.3543L1.07488 53.3545L0.714904 53.0075L54.9949 0.681641L55.3549 1.02865L1.43505 53.0073L55.7148 105.333L55.3549 105.68L1.07507 53.3543Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+    <div class="arrow-switch arrow-right">
+      <svg
+        width="56"
+        height="106"
+        viewBox="0 0 56 106"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M55.3546 53.3543L55.3548 53.3545L55.7148 53.0075L1.43479 0.681641L1.07482 1.02865L54.9946 53.0073L0.714844 105.333L1.07482 105.68L55.3546 53.3543Z"
+          fill="white"
+        />
+      </svg>
+    </div>
     <main>
       <section>
         <a href="randall.html" class="container a">
@@ -56,11 +88,39 @@
   </body>
   <script>
     gsap.from("main section", {
-    x: '-400%', // Start from the left side of the window
-    stagger: 0.1, // Stagger the animations for each section
-    duration: 1.5,
-    ease: "power3.out", // Use an easing function for a smooth slide
-  });
+      x: "-400%", // Start from the left side of the window
+      stagger: 0.1, // Stagger the animations for each section
+      duration: 1.5,
+      ease: "power3.out", // Use an easing function for a smooth slide
+    });
+
+    const arrowRight = document.querySelector(".arrow-right");
+    const arrowLeft = document.querySelector(".arrow-left");
+    const sections = document.querySelectorAll("main section");
+
+    let currentSection = 0;
+
+    arrowRight.addEventListener("click", () => {
+      if (currentSection < sections.length - 1) {
+        currentSection++;
+        gsap.to("section", {
+          x: `-${currentSection * 100}%`,
+          duration: 1.5,
+          ease: "power3.out",
+        });
+      }
+    });
+
+    arrowLeft.addEventListener("click", () => {
+      if (currentSection > 0) {
+        currentSection--;
+        gsap.to("section", {
+          x: `-${currentSection * 100}%`,
+          duration: 1.5,
+          ease: "power3.out",
+        });
+      }
+    });
   </script>
   <script src="/src/js/script.js"></script>
 </html>

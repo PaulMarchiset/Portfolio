@@ -6,6 +6,8 @@
   grid-template-rows: repeat(9, 1fr);
   gap: 1.25rem;
   margin: 3.125rem; /* Add margin around the grid */
+  
+  font-stretch: condensed;
 }
 
 .hero-container {

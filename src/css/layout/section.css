@@ -73,6 +73,7 @@
   justify-content: start;
   align-items: flex-end;
   text-align: right;
+  
 }
 
 .design-content h2 {
@@ -81,6 +82,7 @@
   text-transform: uppercase;
   margin: 0;
   font-weight: 600;
+  
 }
 
 .design-content h3 {

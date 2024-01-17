@@ -4,46 +4,49 @@
 }
 
 * {
-    font-family: 'bahnschrift', sans-serif;
-    font-stretch: semi-condensed;
+  font-family: "bahnschrift", sans-serif;
 }
 
 body {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  font-stretch: condensed;
 }
 
 img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transform-origin: left;
-  }
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform-origin: left;
+}
 
-  .screen {
-    display: none;
-  }
+.screen {
+  display: none;
+}
 
-  .container {
-    width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
-    height: calc(100% - 2 * 3.125rem); /* Subtract top and bottom margin */
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    gap: 1.25rem;
-    padding: 3.125rem; /* Add margin around the grid */
+.container {
+  width: calc(100vw - 2 * 3.125rem); /* Subtract left and right margin */
+  height: calc(100% - 2 * 3.125rem); /* Subtract top and bottom margin */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 1.25rem;
+  padding: 3.125rem; /* Add margin around the grid */
 }
 
 main {
   display: flex;
   flex-wrap: nowrap; /* Ensure the sections are in a single row */
   overflow-x: scroll; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory;/* Enable scroll-snap on the X-axis */
-  height: 100svh;/* Additional styling, such as height, width, etc. */
+  scroll-snap-type: x mandatory; /* Enable scroll-snap on the X-axis */
+  height: 100svh; /* Additional styling, such as height, width, etc. */
 }
 
 .no-scrollX {
@@ -70,3 +73,19 @@ section {
   background-color: #fff;
 }
 
+@media screen and (min-width: 768px) {
+  .arrow-switch {
+    position: fixed;
+    top: 45%;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .arrow-left {
+    left: 2vw;
+  }
+
+  .arrow-right {
+    right: 2vw;
+  }
+}
