@@ -109,13 +109,28 @@
     </nav>
   </body>
   <script>
-    anime({
-      targets: ".about-arrow",
-      translateX: 10,
-      direction: "alternate",
-      loop: true,
-      easing: "easeInOutSine",
+    // anime({
+    //   targets: ".about-arrow",
+    //   translateX: 10,
+    //   direction: "alternate",
+    //   loop: true,
+    //   easing: "easeInOutSine",
+    // });
+
+    const arrowAbout = document.querySelector(".about-arrow");
+    const sections = document.querySelectorAll("main section");
+
+    let currentSection = 0;
+
+    arrowAbout.addEventListener("click", () => {
+              gsap.to("section", {
+          x: `-${currentSection * 100}%`,
+          duration: 1.5,
+          ease: "power3.out",
+        });
+      }
     });
+
   </script>
   <script src="/src/js/script.js"></script>
 </html>

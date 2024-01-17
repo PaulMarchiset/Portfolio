@@ -232,7 +232,8 @@
 }
 
 #marchiset .project-image-main {
-  background-image: url(/assets/img/design/museum/logomarchiset.svg);
+  background-image: url(/assets/img/design/museum/Animation_CMRCHT_logo.gif);
+  filter: invert(1);
 }
 
 #marchiset .project-image-final {
