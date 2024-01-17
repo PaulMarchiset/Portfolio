@@ -28,7 +28,7 @@
 }
 
 .hero-h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 85.214%;
   margin: 0;
   font-weight: 500;
@@ -76,7 +76,7 @@
     padding-left: 3.125rem;
   }
   .hero-h1 {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
   }
   .hero-image {
     display: none;
@@ -84,14 +84,16 @@
   .hero-works {
     grid-column: 6 / 8;
     grid-row: 3 / 8;
-    color: #fff;
       display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: end;
-    font-size: 3rem;
+    font-size: 4rem;
     z-index: 1;
     padding-right: 3.125rem;
+  }
+  .hero-works a {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
