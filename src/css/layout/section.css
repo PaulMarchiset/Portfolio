@@ -34,7 +34,7 @@
   display: block;
   background-size: cover;
   background-position: center;
-  background-image: url(/assets/img/main/paul-1.jpg);
+  background-image: url(/assets/img/main/paul-1.jpeg);
 }
 
 .about-content {
@@ -195,7 +195,9 @@
   }
 
   .about-content-desktop {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     grid-column: 6 / 8;
     grid-row: 2 / 9;
     font-size: 1rem;
@@ -205,7 +207,7 @@
   }
 
   .about-content-desktop p {
-    
+    margin: 0;
     font-family: var(--font-family-secondary);
     font-weight: 200;
   }

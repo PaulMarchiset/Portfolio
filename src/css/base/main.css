@@ -68,14 +68,20 @@ section {
   position: sticky;
   left: 0;
   background-color: #020202;
+  scroll-snap-align: none;
 }
 
 .me {
   background-color: #fff;
 }
 
+.arrow-switch {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .arrow-switch {
+    display: block;
     position: fixed;
     top: 45%;
     z-index: 100;

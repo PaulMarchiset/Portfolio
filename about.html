@@ -20,7 +20,7 @@
       <a href="/"><img src="/assets/icons/LOGO_PM.svg" alt="logo PM" /></a>
     </header>
     <main>
-      <section class="bio">
+      <section class="bio" id="bioLanding">
         <div class="container">
           <div class="about-me"><h2>ME</h2></div>
           <div class="about-img"></div>
@@ -49,21 +49,22 @@
             </p>
             <p>
               During his exchange at Vanier College in Montreal, Paul had the
-            opportunity to deepen his passion for typography, focusing on the
-            design and understanding of characters.
+              opportunity to deepen his passion for typography, focusing on the
+              design and understanding of characters.
             </p>
             <p>
-              His strong interest in audiovisual content has led him to engage in
-              various professional and academic projects, such as live broadcasts,
-              documentaries, short films, and press conferences. This versatility
-              reflects his willingness to explore different aspects of the field.
+              His strong interest in audiovisual content has led him to engage
+              in various professional and academic projects, such as live
+              broadcasts, documentaries, short films, and press conferences.
+              This versatility reflects his willingness to explore different
+              aspects of the field.
             </p>
             <p>
               Beyond his accomplishments, Paul Marchiset remains aware of the
-            constant need for learning. His academic and professional journey
-            reflects his commitment to continuous improvement, always seeking to
-            broaden his horizons and take on new challenges for personal and
-            professional growth.
+              constant need for learning. His academic and professional journey
+              reflects his commitment to continuous improvement, always seeking
+              to broaden his horizons and take on new challenges for personal
+              and professional growth.
             </p>
           </div>
         </div>
@@ -109,28 +110,13 @@
     </nav>
   </body>
   <script>
-    // anime({
-    //   targets: ".about-arrow",
-    //   translateX: 10,
-    //   direction: "alternate",
-    //   loop: true,
-    //   easing: "easeInOutSine",
-    // });
-
-    const arrowAbout = document.querySelector(".about-arrow");
-    const sections = document.querySelectorAll("main section");
-
-    let currentSection = 0;
-
-    arrowAbout.addEventListener("click", () => {
-              gsap.to("section", {
-          x: `-${currentSection * 100}%`,
-          duration: 1.5,
-          ease: "power3.out",
-        });
-      }
+    anime({
+      targets: ".about-arrow",
+      translateX: 10,
+      direction: "alternate",
+      loop: true,
+      easing: "easeInOutSine",
     });
-
   </script>
   <script src="/src/js/script.js"></script>
 </html>
